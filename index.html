@@ -514,14 +514,14 @@
             <ul class="thought-list">
                 <li>What if the node which is performing the Map-Reduce Job is far away from the data node?</li>
             </ul>
-            <img src="/assets/images/data_node_far.png" alt="Data Node Far" class="content-image">
+            <img src="/assets/images/data_node_far.png" alt="Data Node Far" >
             <p>
                 One approach to deal with this is to transfer data from the data node to the node performing the Map-Reduce job. 
                 But if we try doing this, it will result in 
                 <span class="highlight">high network load</span> and 
                 <span class="highlight">slow processing</span>.
             </p>
-            <img src="/assets/images/sending_data_through_network.png" alt="Sending Data Through Network" class="content-image">
+            <img src="/assets/images/sending_data_through_network.png" alt="Sending Data Through Network" >
             <p>
                 Since it is not the best approach, we have another option (like reversing the approach). 
                 What if instead of sending data, we send the map-reduce task (execution program) to the data node? 
@@ -530,16 +530,16 @@
                 This approach is called <span class="highlight">Data Locality Optimization</span>. 
                 It improves processing performance (data is processed locally as everything resides in a single node) and reduces congestion.
             </p>
-            <img src="/assets/images/data_locality_optimization.png" alt="Data Locality Optimization" class="content-image">
+            <img src="/assets/images/data_locality_optimization.png" alt="Data Locality Optimization" >
             <p>
                 To provide fault tolerance and high availability, each data block is replicated to three nodes.
             </p>
-            <img src="/assets/images/replication_of_data_node.png" alt="Replication of Data Node" class="content-image">
+            <img src="/assets/images/replication_of_data_node.png" alt="Replication of Data Node" >
             <p>
                 Hadoop always tries to assign map tasks to nodes where data resides. 
                 For example, if data is present in NodeA, NodeB, and NodeC, Hadoop tries to assign the job to NodeA, NodeB, or NodeC directly.
             </p>
-            <img src="/assets/images/same_map_data_node.png" alt="Same Map Data Node" class="content-image">
+            <img src="/assets/images/same_map_data_node.png" alt="Same Map Data Node" >
         </div>
     
         <div class="container">
