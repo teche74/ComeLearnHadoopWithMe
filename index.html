@@ -428,7 +428,7 @@
             <p>
                 Hadoop actually processes multiple subsets of data in different processes using all available hardware threads of the machine.
             </p>
-            <img src="/assets/images/MapReduce_diag.png" alt="Hadoop MapReduce Flow">
+            <img src="assets/images/MapReduce_diag.png" alt="Hadoop MapReduce Flow">
     
             <h2>Something Came up in Mind 🧐</h2>
             <p>
@@ -441,7 +441,7 @@
                     <em>Why?</em> It can happen that data is distributed in such an uneven proportion that some nodes deal with a high load while others have less or no data.
                 </li>
             </ul>
-            <img src="/assets/images/uneven_chunks.png" alt="Uneven Data Chunks">
+            <img src="assets/images/uneven_chunks.png" alt="Uneven Data Chunks">
     
             <p>
                 To deal with this scenario, Hadoop creates fixed chunk sizes of data. This helps in utilizing memory properly and ensures that equal data proportions are sent to all processes.  
@@ -451,7 +451,7 @@
             <ul>
                 <li>Once data is processed by every machine, how to combine this processed data? 🤔</li>
             </ul>
-            <img src="/assets/images/how_to_merge.png" alt="Combining Data">
+            <img src="assets/images/how_to_merge.png" alt="Combining Data">
     
             <p>
                 To understand this, we have to understand the flow of execution:  
@@ -496,7 +496,7 @@
                 <li><strong>Job Tracker:</strong> It coordinates all jobs run on the system by task trackers.</li>
                 <li><strong>Task Tracker:</strong> It completes the assigned tasks and sends progress reports to the job tracker.</li>
             </ul>
-            <img src="/assets/images/job_task_tracker.png" alt="Job and Task Tracker">
+            <img src="assets/images/job_task_tracker.png" alt="Job and Task Tracker">
     
             <h3>Things to Remember:</h3>
             <ul>
@@ -514,14 +514,14 @@
             <ul class="thought-list">
                 <li>What if the node which is performing the Map-Reduce Job is far away from the data node?</li>
             </ul>
-            <img src="/assets/images/data_node_far.png" alt="Data Node Far" >
+            <img src="assets/images/data_node_far.png" alt="Data Node Far" >
             <p>
                 One approach to deal with this is to transfer data from the data node to the node performing the Map-Reduce job. 
                 But if we try doing this, it will result in 
                 <span class="highlight">high network load</span> and 
                 <span class="highlight">slow processing</span>.
             </p>
-            <img src="/assets/images/sending_data_through_network.png" alt="Sending Data Through Network" >
+            <img src="assets/images/sending_data_through_network.png" alt="Sending Data Through Network" >
             <p>
                 Since it is not the best approach, we have another option (like reversing the approach). 
                 What if instead of sending data, we send the map-reduce task (execution program) to the data node? 
@@ -530,16 +530,16 @@
                 This approach is called <span class="highlight">Data Locality Optimization</span>. 
                 It improves processing performance (data is processed locally as everything resides in a single node) and reduces congestion.
             </p>
-            <img src="/assets/images/data_locality_optimization.png" alt="Data Locality Optimization" >
+            <img src="assets/images/data_locality_optimization.png" alt="Data Locality Optimization" >
             <p>
                 To provide fault tolerance and high availability, each data block is replicated to three nodes.
             </p>
-            <img src="/assets/images/replication_of_data_node.png" alt="Replication of Data Node" >
+            <img src="assets/images/replication_of_data_node.png" alt="Replication of Data Node" >
             <p>
                 Hadoop always tries to assign map tasks to nodes where data resides. 
                 For example, if data is present in NodeA, NodeB, and NodeC, Hadoop tries to assign the job to NodeA, NodeB, or NodeC directly.
             </p>
-            <img src="/assets/images/same_map_data_node.png" alt="Same Map Data Node" >
+            <img src="assets/images/same_map_data_node.png" alt="Same Map Data Node" >
         </div>
     
         <div class="container">
@@ -585,7 +585,7 @@
                 </p>
             </div>
 
-            <img src="/assets/images/map_assign_strategies.png" alt="">
+            <img src="assets/images/map_assign_strategies.png" alt="">
 
             <p>Things To Remember :
                 <ul>
@@ -595,7 +595,7 @@
                     <li>finally output given by reduced function is written to HDFS for readablity.</li>
                 </ul>
             </p>
-            <img src="/assets/images/info_sample.png" alt="">
+            <img src="assets/images/info_sample.png" alt="">
         </div>
     </section>
     
