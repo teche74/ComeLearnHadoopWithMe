@@ -13,6 +13,7 @@ https://teche74.github.io/ComeLearnHadoopWithMe/
 
 Project Structure:
 ------------------
+```
 ComeLearnHadoopWithMe/
 ├── about.html                # About page detailing the project or Hadoop overview
 ├── contact.html              # Contact page for inquiries or further information
@@ -46,7 +47,7 @@ ComeLearnHadoopWithMe/
     │   └── uneven_chunks.png
     └── js/
         └── index.js          # JavaScript file (includes functionality such as charts via Chart.js)
-
+```
 Features:
 ---------
 - Introduction to Hadoop: Learn why Hadoop is important in the digital era.
